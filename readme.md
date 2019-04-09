@@ -39,3 +39,8 @@ if a < 4 {
     print("Only if a is bigger than or equal to 8.")  // This line will be printed.
 }
 ```
+### For Loop
+```swift
+for index in 1...5 {
+    print(index)
+}
