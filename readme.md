@@ -40,7 +40,71 @@ if a < 4 {
 }
 ```
 ### For Loop
+>for 循环
 ```swift
 for index in 1...5 {
     print(index)
 }
+```
+
+### While Loop
+>while循环
+```swift
+var counter:Int = 5
+while counter > 0 {
+    print("hello")
+    counter -= 1
+}
+```
+### Repeat While Loop
+>这是全新的操作
+```swift
+var counter:Int = 5
+repeat {
+    print("this is new operation")
+    counter += 1
+} while counter < 10
+```
+### Function
+>无返回值的方法
+```swift
+func sayHello() {
+    print("Hello")
+}
+```
+>又返回值的方法
+```swift
+func getGreeting () -> String {
+    return "Hi"
+}
+```
+>有参数的函数
+```swift
+var content:String = "Hi, I am a parameter."
+func say(content param:String) -> Bool {
+    print(param)
+    return true
+} 
+say(content: content)
+```
+>多参数参数
+```swift
+func addTwoNumbers(using param1:Int, and param2:Int) -> Int{
+    return param1 + param2
+}
+print(addTwoNumbers(using: 1, add: 2))
+```
+>参数的Label是为了让整个方法和参数读起来更加的语义化，我们也可以省略这个参数的Label，使其看起来像是如下的形式
+```swift
+func addTwoNumbers(param1:Int, param2:Int) -> Int{
+    return param1 + param2
+}
+print(addTwoNumbers(param1: 1, param2: 2))
+```
+>如上的方式可以让我们在创建方法的时候省去Argument Label，但在调用方法的时候还是需要使用参数的名称。可以通过在前面加上下滑线的方式，省略调用是的参数名
+```swift
+func addTwoNumbers(_ param1:Int, _ param2:Int) -> Int{
+    return param1 + param2
+}
+print(addTwoNumbers(1, 2))
+```
