@@ -108,3 +108,51 @@ func addTwoNumbers(_ param1:Int, _ param2:Int) -> Int{
 }
 print(addTwoNumbers(1, 2))
 ```
+### Class
+>类
+```swift
+class BlogPost {
+    var title = ""
+    var body = ""
+    var author = ""
+    var numberOfComments = 0
+    func addComment() {
+        numberOfComments += 1
+    }
+}
+let myPost = BlogPost()
+myPost.title = "Hello Playground"
+myPost.author = "Eddie"
+myPost.body = "Hi there"
+let mySecondPost = BlogPost()
+mySecondPost.title = "Goodbye"
+mySecondPost.author = "Eddie"
+mySecondPost.body = "Goodbye"
+myPost.addComment()
+print(myPost.numberOfComments)
+```
+### Inheritage Class
+>继承，通过在声明类的时候在类名后面加上冒号来继承；在重写的方法前面加上override关键字
+```swift
+class Car {
+    var topSpeed = 200
+    func drive() {
+        print("Driving at \(topSpeed)")
+    }
+}
+class FutureCar : Car {
+    override func drive() {
+        print("Driving at \(topSpeed + 50)")
+    }
+    func fly() {
+        print("Flying")
+    }
+}
+let myRide = Car()
+myRide.topSpeed
+myRide.drive()
+let newCar = FutureCar()
+newCar.drive()
+newCar.fly()
+```
+
