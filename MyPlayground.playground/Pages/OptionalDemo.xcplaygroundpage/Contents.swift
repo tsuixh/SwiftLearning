@@ -11,6 +11,16 @@ class BlogPost {
     var body = "hey"
     var author:Person?
     var numberOfComments = 0
+    
+    init() {
+        title = "My Title"
+        author = Person()
+    }
+    
+    convenience init(customTitle:String) {
+        self.init()
+        self.title = customTitle
+    }
 }
 
 let post = BlogPost()
