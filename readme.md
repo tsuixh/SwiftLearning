@@ -155,4 +155,28 @@ let newCar = FutureCar()
 newCar.drive()
 newCar.fly()
 ```
+### Initialize
+>就是构造器
+```swift
+import UIKit
+class Person {
+    var name = ""
+    var age = 0
+    init(name name:String, age age:Int) {
+        self.name = name
+        self.age = age
+    }
+    init() {
+        self.name = "Nobody"
+        self.age = 0
+    }
+}
+var jack = Person(name: "Jack", age: 33)
+print(jack.name)
+print(jack.age)
+var nobody = Person()
+print(nobody.name)
+```
+### Optional
+>说白了就是类在设置属性的时候不设置初始值，要用问号表示
 
